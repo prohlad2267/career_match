@@ -1,0 +1,218 @@
+.job-matches-page {
+  padding: var(--space-12) 0;
+  min-height: calc(100vh - 80px);
+  margin-top: 80px;
+}
+
+.job-matches-header {
+  margin-bottom: var(--space-6);
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-gray-900);
+  margin-bottom: var(--space-2);
+}
+
+.page-description {
+  color: var(--color-gray-600);
+  margin-bottom: var(--space-6);
+}
+
+.search-form {
+  display: flex;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.search-input-container {
+  position: relative;
+  flex: 1;
+}
+
+.search-icon {
+  position: absolute;
+  left: var(--space-3);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-gray-500);
+}
+
+.search-input {
+  width: 100%;
+  padding: var(--space-3) var(--space-3) var(--space-3) var(--space-8);
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--border-radius-md);
+  font-size: 1rem;
+}
+
+.search-button {
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  bottom: 4px;
+  padding: 0 var(--space-4);
+  border-radius: var(--border-radius-md);
+  background-color: var(--color-primary-600);
+  color: white;
+  font-weight: 500;
+}
+
+.filter-toggle-button {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  white-space: nowrap;
+  padding: 0 var(--space-3);
+  height: 48px;
+  background-color: white;
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--border-radius-md);
+  color: var(--color-gray-700);
+}
+
+.filter-toggle-button:hover {
+  background-color: var(--color-gray-100);
+}
+
+.chevron-icon {
+  transition: transform var(--transition-fast) ease;
+}
+
+.chevron-icon.open {
+  transform: rotate(180deg);
+}
+
+.filters-panel {
+  background-color: var(--color-gray-50);
+  border-radius: var(--border-radius-lg);
+  padding: var(--space-4);
+  margin-bottom: var(--space-6);
+  overflow: hidden;
+}
+
+.filters-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.filter-group label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-gray-700);
+}
+
+.filter-group select {
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--border-radius-md);
+  background-color: white;
+}
+
+.filter-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-3);
+}
+
+.clear-filters-button {
+  background-color: white;
+  color: var(--color-gray-700);
+  border: 1px solid var(--color-gray-300);
+}
+
+.apply-filters-button {
+  background-color: var(--color-primary-600);
+}
+
+.jobs-stats {
+  color: var(--color-gray-600);
+  font-size: 0.875rem;
+}
+
+.jobs-container {
+  margin-bottom: var(--space-8);
+}
+
+.jobs-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.jobs-loading {
+  display: flex;
+  justify-content: center;
+  padding: var(--space-12);
+}
+
+.no-jobs-message {
+  background-color: white;
+  border-radius: var(--border-radius-lg);
+  padding: var(--space-8);
+  text-align: center;
+  box-shadow: var(--shadow-md);
+}
+
+.no-jobs-message h3 {
+  font-size: 1.25rem;
+  margin-bottom: var(--space-2);
+  color: var(--color-gray-800);
+}
+
+.no-jobs-message p {
+  color: var(--color-gray-600);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .search-form {
+    flex-direction: column;
+  }
+  
+  .filter-toggle-button {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .filters-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .filter-actions {
+    flex-direction: column;
+  }
+  
+  .clear-filters-button,
+  .apply-filters-button {
+    width: 100%;
+  }
+  
+  .search-button {
+    position: static;
+    width: 100%;
+    margin-top: var(--space-2);
+    height: 48px;
+  }
+  
+  .search-input-container {
+    position: static;
+  }
+}
+
+@media (min-width: 768px) {
+  .jobs-grid {
+    gap: var(--space-6);
+  }
+}
